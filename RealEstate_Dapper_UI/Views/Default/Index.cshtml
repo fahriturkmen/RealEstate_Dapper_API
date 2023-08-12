@@ -4,5 +4,13 @@
     Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
 
-<h1>Merhaba</h1>
+@await Component.InvokeAsync("_DefaultFeatureComponentPartial")
+@await Component.InvokeAsync("_DefaultHomePageProductList")
 
+<section class="w3l-index3" id="about">
+    @await Component.InvokeAsync("_DefaultWhoWeAreComponentPartial")
+   
+</section>
+
+@await Component.InvokeAsync("_DefaultServicesComponentPartial")
+@await Component.InvokeAsync("_DefaultProductListExploreCitiesComponentPartial")
