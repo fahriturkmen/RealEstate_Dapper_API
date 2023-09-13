@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RealEstate_Dapper_API.Dtos.WhoWeAreDetailDtos;
-using RealEstate_Dapper_API.Repositories.WhoWeAreRepository;
+using RealEstate_Dapper_API.Repositories.WhoWeAreRepositories;
 
 namespace RealEstate_Dapper_API.Controllers
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RealEstate_Dapper_API.Dtos.CategoryDtos;
-using RealEstate_Dapper_API.Repositories.CategoryRepository;
+using RealEstate_Dapper_API.Repositories.CategoryRepositories;
 
 namespace RealEstate_Dapper_API.Controllers
 {

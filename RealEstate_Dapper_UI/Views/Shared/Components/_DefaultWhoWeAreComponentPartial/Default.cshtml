@@ -1,4 +1,5 @@
-﻿<section class="w3l-index3" id="about">
+﻿@model List<ResultServiceDto>
+<section class="w3l-index3" id="about">
     <div class="midd-w3 pb-5">
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row">
@@ -17,15 +18,10 @@
                             @ViewBag.vDescription2
                         </p>
                         <ul class="w3l-right-book w3l-right-book-grid mt-md-5 mt-4">
-                            <li><span class="fa fa-check" aria-hidden="true"></span>Olağanüstü Gayrimenkuller</li>
-                            <li><span class="fa fa-check" aria-hidden="true"></span>Sosyal sorumluluk</li>
-                            <li>
-                                <span class="fa fa-check" aria-hidden="true"></span>
-                                Uzman tavsiyesi alın
-                            </li>
-                            <li><span class="fa fa-check" aria-hidden="true"></span>Gayrimenkul grupları</li>
-                            <li><span class="fa fa-check" aria-hidden="true"></span>Uzman hizmetler</li>
-                            <li><span class="fa fa-check" aria-hidden="true"></span>Vizyon & strateji</li>
+                            @foreach (var item in Model)
+                            {
+                                <li><span class="fa fa-check" aria-hidden="true"></span>@item.ServiceName</li>
+                            }
                         </ul>
                         <a href="#services" class="btn btn-style btn-primary mt-4">Hizmetlerimizi keşfedin</a>
                     </div>
