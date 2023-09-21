@@ -1,6 +1,6 @@
-﻿namespace RealEstate_Dapper_UI.Dtos.BottomGridDtos
+﻿namespace RealEstate_Dapper_UI.Dtos.ProductDtos
 {
-    public class ResultProductDtos
+    public class UpdateProductDto
     {
         public int productID { get; set; }
         public string productTitle { get; set; }
@@ -16,5 +16,3 @@
         public bool productStatus { get; set; }
     }
 }
-
-
