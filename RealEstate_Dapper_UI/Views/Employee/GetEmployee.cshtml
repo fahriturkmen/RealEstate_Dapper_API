@@ -1,0 +1,30 @@
+﻿@model GetByIDEmployeeDto
+@{
+    ViewData["Title"] = "GetEmployee";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Personel Detay</h6>
+                <form method="post">
+                    <label>Adı:</label>
+                    <input type="text" asp-for="EmployeeName" class="form-control" />
+                    <label>Ünvanı:</label>
+                    <input type="text" asp-for="EmployeeTitle" class="form-control" />
+                    <label>Maili:</label>
+                    <input type="email" asp-for="EmployeeMail" class="form-control" />
+                    <label>Telefonu:</label>
+                    <input type="text" asp-for="EmployeePhoneNumber" class="form-control" />
+                    <label>Notlar:</label>
+                    <input type="text" asp-for="EmployeeComment" class="form-control" />
+                    <label>Fotoğraf:</label>
+                    <input type="text" asp-for="EmployeeImageURL" class="form-control" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

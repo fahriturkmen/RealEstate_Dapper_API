@@ -10,7 +10,7 @@
         public string productAdress { get; set; }
         public string productDescription { get; set; }
         public string productType { get; set; }
-        public string productCategoryName { get; set; }
+        public int productCategoryID { get; set; }
         public int productEmployeeID { get; set; }
         public bool productStatus { get; set; }
     }
