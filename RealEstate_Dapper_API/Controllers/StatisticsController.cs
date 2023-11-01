@@ -63,22 +63,52 @@ namespace RealEstate_Dapper_API.Controllers
             return Ok(_statisticRepository.CategoryNameByMaxSalesCount());
         }
 
-        //[HttpGet("CategoryCount")]
-        //public IActionResult CategoryCount()
-        //{
-        //    return Ok(_statisticRepository.CategoryCount());
-        //}
+        [HttpGet("CityName_MaxSalesCount")]
+        public IActionResult CityName_MaxSalesCount()
+        {
+            return Ok(_statisticRepository.CityName_MaxSalesCount());
+        }
 
-        //[HttpGet("CategoryCount")]
-        //public IActionResult CategoryCount()
-        //{
-        //    return Ok(_statisticRepository.CategoryCount());
-        //}
+        [HttpGet("GroupByCityName_Count")]
+        public IActionResult GroupByCityName_Count()
+        {
+            return Ok(_statisticRepository.GroupByCityName_Count());
+        }
 
-        //[HttpGet("CategoryCount")]
-        //public IActionResult CategoryCount()
-        //{
-        //    return Ok(_statisticRepository.CategoryCount());
-        //}
+        [HttpGet("EmployeeNameByMaxSalesCount")]
+        public IActionResult EmployeeNameByMaxSalesCount()
+        {
+            return Ok(_statisticRepository.EmployeeNameByMaxSalesCount());
+        }
+
+        [HttpGet("LastAddedProductPrice")]
+        public IActionResult LastAddedProductPrice()
+        {
+            return Ok(_statisticRepository.LastAddedProductPrice());
+        }
+
+        [HttpGet("NewestBuildingYear")]
+        public IActionResult NewestBuildingYear()
+        {
+            return Ok(_statisticRepository.NewestBuildingYear());
+        }
+
+        [HttpGet("OldestBuildingYear")]
+        public IActionResult OldestBuildingYear()
+        {
+            return Ok(_statisticRepository.OldestBuildingYear());
+        }
+
+        [HttpGet("PassiveCategoryCount")]
+        public IActionResult PassiveCategoryCount()
+        {
+            return Ok(_statisticRepository.PassiveCategoryCount());
+        }
+
+        [HttpGet("ProductCount")]
+        public IActionResult ProductCount()
+        {
+            return Ok(_statisticRepository.ProductCount());
+        }
     }
 }

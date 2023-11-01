@@ -14,8 +14,8 @@ namespace RealEstate_Dapper_API.Repositories.StatisticRepositories
         decimal AveragePriceRentProduct();
         decimal AveragePriceSaleProduct();
         string CityName_MaxSalesCount();
-        string GroupByCityName_SalesCount();
-        int LastAddedProductPrice();
+        int GroupByCityName_Count();
+        decimal LastAddedProductPrice();
         string NewestBuildingYear();
         string OldestBuildingYear();
         int AverageRoomCount();
