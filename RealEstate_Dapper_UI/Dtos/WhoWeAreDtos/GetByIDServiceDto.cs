@@ -1,8 +1,8 @@
-﻿namespace RealEstate_Dapper_API.Dtos.ServiceDtos
+﻿namespace RealEstate_Dapper_UI.Dtos.WhoWeAreDtos
 {
     public class GetByIDServiceDto
     {
-        public int ServiceId { get; set; }
+        public int ServiceID { get; set; }
         public string ServiceName { get; set; }
         public bool ServiceStatus { get; set; }
     }

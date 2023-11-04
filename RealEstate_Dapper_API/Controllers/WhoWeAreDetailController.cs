@@ -37,7 +37,7 @@ namespace RealEstate_Dapper_API.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteWhoWeAreDetail(int id)
         {
             _whoWeAreRepository.DeleteWhoWeAreDetailAsync(id);
@@ -45,7 +45,7 @@ namespace RealEstate_Dapper_API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCategory(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
+        public async Task<IActionResult> UpdateWhoWeAreDetail(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
         {
             _whoWeAreRepository.UpdateWhoWeAreDetailAsync(updateWhoWeAreDetailDto);
             return Ok();

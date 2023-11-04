@@ -26,9 +26,9 @@ namespace RealEstate_Dapper_API.Repositories.ServiceRepositories
 
         public async void DeleteServiceAsync(int id)
         {
-            string query = "Delete From Tbl_Service Where ServiceID = @serviceID";
+            string query = "Delete From Tbl_Service Where ServiceID = @serviceId";
             var parameters = new DynamicParameters();
-            parameters.Add("@serviceID", id);
+            parameters.Add("@serviceId", id);
             using (var connection = _context.createConnection())
             {
                 await connection.ExecuteAsync(query, parameters);
@@ -47,9 +47,9 @@ namespace RealEstate_Dapper_API.Repositories.ServiceRepositories
 
         public async Task<GetByIDServiceDto> GetService(int id)
         {
-            string query = "Select * From Tbl_Service Where ServiceID = @serviceID";
+            string query = "Select * From Tbl_Service Where ServiceID = @serviceId";
             var parameters = new DynamicParameters();
-            parameters.Add("@serviceID", id);
+            parameters.Add("@serviceId", id);
             using (var connection = _context.createConnection())
             {
                 var values = await connection.QueryFirstOrDefaultAsync<GetByIDServiceDto>(query, parameters);
@@ -59,11 +59,11 @@ namespace RealEstate_Dapper_API.Repositories.ServiceRepositories
 
         public async void UpdateServiceAsync(UpdateServiceDto serviceDto)
         {
-            string query = "Update Tbl_Service Set ServiceName=@serviceName, ServiceStatus=@serviceStatus where ServiceID=@serviceID";
+            string query = "Update Tbl_Service Set ServiceName=@serviceName, ServiceStatus=@serviceStatus where ServiceID=@serviceId";
             var parameters = new DynamicParameters();
-            parameters.Add("@categoryName", serviceDto.ServiceName);
-            parameters.Add("@categoryStatus", serviceDto.ServiceStatus);
-            parameters.Add("@categoryID", serviceDto.ServiceID);
+            parameters.Add("@serviceName", serviceDto.ServiceName);
+            parameters.Add("@serviceStatus", serviceDto.ServiceStatus);
+            parameters.Add("@serviceId", serviceDto.ServiceId);
             using (var connection = _context.createConnection())
             {
                 var values = await connection.ExecuteAsync(query, parameters);
