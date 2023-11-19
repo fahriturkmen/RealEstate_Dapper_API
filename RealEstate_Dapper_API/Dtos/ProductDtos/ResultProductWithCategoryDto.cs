@@ -13,6 +13,7 @@
         public string ProductType { get; set; }
         public string ProductCategoryName { get; set; }
         public int ProductEmployeeID { get; set; }
+        public bool ProductDealofTheDay { get; set; }
         public bool ProductStatus { get; set; }
     }
 }

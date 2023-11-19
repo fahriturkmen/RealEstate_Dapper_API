@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using RealEstate_Dapper_API.Dtos.CategoryDtos;
 using RealEstate_Dapper_API.Dtos.ProductDtos;
 using RealEstate_Dapper_API.Models.DapperContext;
 
@@ -25,7 +24,7 @@ namespace RealEstate_Dapper_API.Repositories.ProductRepositories
 
         public async Task<List<ResultProductWithCategoryDto>> GetAllProductWithCategoryAsync()
         {
-            string query = "Select ProductID,ProductTitle,ProductPrice,ProductCoverImage,ProductCity,ProductDistrict,ProductAdress,ProductDescription,ProductType,Tbl_Category.CategoryName AS ProductCategoryName,ProductEmployeeID,ProductStatus From Tbl_Product inner join Tbl_Category on Tbl_Product.ProductCategory=Tbl_Category.CategoryID";
+            string query = "Select ProductID,ProductTitle,ProductPrice,ProductCoverImage,ProductCity,ProductDistrict,ProductAdress,ProductDescription,ProductType,Tbl_Category.CategoryName AS ProductCategoryName,ProductEmployeeID,ProductStatus,ProductDealofTheDay From Tbl_Product inner join Tbl_Category on Tbl_Product.ProductCategory=Tbl_Category.CategoryID";
             using (var connection = _context.createConnection())
             {
                 var values = await connection.QueryAsync<ResultProductWithCategoryDto>(query);
